@@ -1,0 +1,12 @@
+release/connectinfo.o
+release/datetimeshow.o
+release/loginwin.o
+release/main.o
+release/serverwin.o
+release/table.o
+release/qrc_image.o
+release/moc_connectinfo.o
+release/moc_datetimeshow.o
+release/moc_loginwin.o
+release/moc_serverwin.o
+release/moc_table.o

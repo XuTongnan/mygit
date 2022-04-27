@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ServerWin</class>
+ <widget class="QMainWindow" name="ServerWin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>点餐服务端</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+	border-image: url(:/img/background.png);
+	
+}
+
+QListWidget{
+	color: rgb(0, 255, 255);
+	background-color:  rgba(74, 74, 74,100);
+}
+
+QLabel{
+	color: rgb(0, 255, 255);
+	/*background-color: rgb(85, 85, 127);*/
+}
+
+QPushButton{
+	border-radius: 5px;
+	background-color: rgba(255, 170, 0, 100);
+	color: rgb(0, 255, 255);
+}
+QPushButton:hover{
+	background-color: rgb(255, 85, 255);
+}
+QPushButton:pressed{	
+	background-color: rgba(255, 170, 0, 100);
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" colspan="2">
+     <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,2,1">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(85, 85, 127);</string>
+          </property>
+          <property name="text">
+           <string>本机IP：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="IPLb">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(85, 85, 127);</string>
+          </property>
+          <property name="text">
+           <string>0.0.0.0</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <family>04b_21</family>
+          <pointsize>16</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*background-color: 
+qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));*/
+
+
+background-color: rgb(85, 85, 127);
+font: 16pt &quot;04b_21&quot;;
+</string>
+        </property>
+        <property name="text">
+         <string>- 服  务  端 -</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(85, 85, 127);</string>
+          </property>
+          <property name="text">
+           <string>服务员：</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="managerLb">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(85, 85, 127);</string>
+          </property>
+          <property name="text">
+           <string>001</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="styleSheet">
+       <string notr="true">QTabWidget::pane{/* 这里把panelRect画成无背景色无边框的*/
+	background-color: rgba(74, 74, 74,100);
+    border: none;
+}
+
+QTabWidget::tab-bar
+{
+left:0px;     
+}
+
+QTabBar::tab
+{
+border:none; 
+height:46px;
+border-radius: 3px;
+background-color: rgba(74, 74, 74,100);
+color: rgb(255, 170, 0);
+}
+
+QTabBar::tab:selected
+{
+	margin-left: 1;  
+	margin-right: 0;
+	color: rgb(255, 255, 0);
+}
+
+QTabBar::tab:!selected
+{
+color: white;
+margin-left: 1;
+margin-right: 0;
+}
+
+QTabBar::tab:hover:!selected
+{
+color: white;
+margin-left: 1;
+margin-right: 0;
+}
+
+QTabBar::tab:!selected
+{
+margin-top: 6px;   
+margin-bottom: -6px; 
+}​
+
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>-1</number>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>服务窗口：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="helpOver">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	border-radius: 5px;
+	background-color: rgba(255, 170, 0, 100);
+	color: rgb(0, 255, 255);
+}
+QPushButton:hover{
+	background-color: rgb(255, 85, 255);
+}
+QPushButton:pressed{	
+	background-color: rgba(255, 170, 0, 100);
+}</string>
+            </property>
+            <property name="text">
+             <string>服务已完成</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListWidget" name="helpListW"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>其他信息窗口：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clearPay">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>清除记录</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListWidget" name="payListW">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

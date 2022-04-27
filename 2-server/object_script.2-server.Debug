@@ -1,0 +1,12 @@
+debug/connectinfo.o
+debug/datetimeshow.o
+debug/loginwin.o
+debug/main.o
+debug/serverwin.o
+debug/table.o
+debug/qrc_image.o
+debug/moc_connectinfo.o
+debug/moc_datetimeshow.o
+debug/moc_loginwin.o
+debug/moc_serverwin.o
+debug/moc_table.o
